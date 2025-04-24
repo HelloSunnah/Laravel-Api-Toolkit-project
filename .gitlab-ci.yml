@@ -1,0 +1,39 @@
+deploy_to_live:
+  stage: deploy
+  script:
+    - echo "Deploying Meeting Management Project to Local Apache Server"
+    # Clean the existing contents in the target directory
+    - sudo rm -rf /var/www/html/meeting-management-system-api/*
+    # Copy the project files from the GitLab Runner's build directory to the Apache directory
+    - sudo cp -R /home/gitlab-runner/builds/zgTFSq5j/0/php_apps/meeting-management-system-api/* /var/www/html/meeting-management-system-api/
+  only:
+    - master
+  tags:
+    - deploy
+
+deploy_to_quality_assurance:
+  stage: deploy
+  script:
+    - echo "Deploying Meeting Management Project to Local Apache Server"
+    # Clean the existing contents in the target directory
+    - sudo rm -rf /var/www/html/meeting-management-system-qa-api/*
+    # Copy the project files from the GitLab Runner's build directory to the Apache directory
+    - sudo cp -R /home/gitlab-runner/builds/zgTFSq5j/0/php_apps/meeting-management-system-api/* /var/www/html/meeting-management-system-qa-api/
+  only:
+    - qualityassurance
+  tags:
+    - deploy
+
+deploy_to_uat:
+  stage: deploy
+  script:
+    - echo "Deploying Meeting Management Project to Local Apache Server"
+    # Clean the existing contents in the target directory
+    - sudo rm -rf /var/www/html/meeting-management-system-uat-api/*
+    # Copy the project files from the GitLab Runner's build directory to the Apache directory
+    - sudo cp -R /home/gitlab-runner/builds/zgTFSq5j/0/php_apps/meeting-management-system-api/* /var/www/html/meeting-management-system-uat-api/
+  only:
+    - usertest
+  tags:
+    - deploy
+
