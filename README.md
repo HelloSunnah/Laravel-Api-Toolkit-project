@@ -25,6 +25,8 @@ This is a Laravel-based web application featuring a **real-time chat system**, p
 ```bash
 composer install
 npm install && npm run dev
+exit
+
 Environment Setup
 cp .env.example .env
 php artisan key:generate
