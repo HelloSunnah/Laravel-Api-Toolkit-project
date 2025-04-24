@@ -79,6 +79,16 @@ REVERB_APP_SECRET=your-app-secret
 REVERB_HOST=127.0.0.1
 REVERB_PORT=6001
 
+```
+
+
+
+
+🛠 Commands Reference
+Start Laravel and Reverb:
+ ```bash
+php artisan serve
+php artisan reverb:start
 
 ```
-🛠 Commands Reference
+
