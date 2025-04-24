@@ -46,7 +46,9 @@ We are using Laravel API Toolkit to generate API resources, controllers, and rou
 Example: Generate Room API
 To generate a full set of endpoints (Controller, Model, Migration, Resource, etc.):
  ```bash
-php artisan api:generate Room "company_id:foreignId|roomName:string|roomDesc:text|totalSeat:integer|roomSerial:integer|status:integer" --all
+php artisan api:generate Room
+ "company_id:foreignId|roomName:string|roomDesc:text|
+totalSeat:integer|roomSerial:integer|status:integer" --all
 
 ```
 💬 Real-Time Chat
